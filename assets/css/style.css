@@ -1,0 +1,1254 @@
+/*
+Author       : Deepak Panchal
+Template Name: Saffola
+Version      : 1.0
+*/
+/*=============================================================
+    CSS INDEX
+    =============================
+    01. START GENERAL STYLE (body, link color, section-title, preloader btn, overlay, section-padding etc)
+    02. START BOOTSTRAP NAVIGATION OVERRIDES
+    03. START SLIDER BANNER DESIGN
+    04. START ABOUT DESIGN
+    05. START FEATURES DESIGN
+    06. START PREPARATION DESIGN
+	07. START RECIPES DESIGN
+    08. START TESTIMONIAL DESIGN
+    09. START FOOTER DESIGN
+    10. START SCROLL-TOP DESIGN
+  =============================================================*/
+/*
+* ----------------------------------------------------------------------------------------
+* 01. START GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+	letter-spacing: 0.4px;
+    line-height: 26px;
+    font-size: 15px;
+    color: #737373;
+	overflow-x: hidden;
+    background: #FFF1BE;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: 'Caveat Brush', sans-serif;
+	color: #414141;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+ul,li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+a:active, a:hover {
+  outline: 0 none;
+}
+
+/* START PRELOADER */
+
+.preloader{
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+	background: #fff;
+}
+.loader_wrap{
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin: -70px 0 0 -70px;
+}
+.loader{
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+}
+.loader .loader-inner-1,
+.loader .loader-inner-2,
+.loader .loader-inner-3,
+.loader .loader-inner-4{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+}
+.loader .loader-inner-1:before,
+.loader .loader-inner-2:before,
+.loader .loader-inner-3:before,
+.loader .loader-inner-4:before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    animation-name: loading-1;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-duration: 2s;
+}
+.loader .loader-inner-1{
+    top: 0;
+    left: 0;
+    transform: rotate(70deg);
+}
+.loader .loader-inner-1:before{ background: #fbc316; }
+.loader .loader-inner-2{
+    top: 0;
+    right: 0;
+    transform: rotate(160deg);
+}
+.loader .loader-inner-2:before{ background: #db0811; }
+.loader .loader-inner-3{
+    bottom: 0;
+    right: 0;
+    transform: rotate(-110deg);
+}
+.loader .loader-inner-3:before{ background: #fbc316; }
+.loader .loader-inner-4{
+    bottom: 0;
+    left: 0;
+    transform: rotate(-20deg);
+}
+.loader .loader-inner-4:before{ background: #db0811; }
+@keyframes loading-1{
+    0%{
+        width: 20px;
+        right: 0;
+    }
+    30%{
+        width: 120px;
+        right: -100px;
+    }
+    60%{
+        width: 20px;
+        right: -100px;
+    }
+}
+
+/* END PRELOADER */
+
+/* START SECTION PADDING */
+
+.section_padding{
+	padding: 100px 0;	
+}
+
+/* START SECTION PADDING */
+
+.color_white{
+	color: #fff !important;
+}
+.gray_bg{
+	background: #fafafa;
+}
+.testimonial .content.t1_color {
+	background: rgba(0, 54, 107, 0.8);
+}
+.testimonial .content.t2_color {
+    background: rgba(245, 175, 37, 0.8);
+}
+
+/* START SECTION-HEADING */
+
+.section_heading{
+	margin-bottom: 50px;
+}
+.section_heading h2 {
+    font-size: 60px;
+    color: #DB0812;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+/* END SECTION-HEADING */
+
+/* START BUTTON STYLE */
+
+.single_banner_button{ margin-top: 60px; }
+.about_button { margin-top: 30px; }
+
+.btn {
+    padding: 11px 25px 11px 25px;
+    border-radius: 0;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    background: #580141;
+    font-weight: 600;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.btn:before{
+    content: "";
+    width: 30%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: -5px 0 0 -5px;
+    transform: rotate(-20deg);
+    transform-origin: 0 0 0;
+    transition: all 0.3s ease 0s;
+    z-index: 1;
+}
+.btn:hover:before{
+    width: 40%;
+}
+.btn:focus, .btn:hover {
+    color: #fff;
+    outline: none;
+}
+.btn:before{
+    background: rgba(255, 255, 255, 0.2);
+}
+.btn.main_btn{
+    background: #fbc316;
+}
+.btn.main_btn:focus
+.btn.main_btn:hover{
+	outline: none;
+    background: #fbc316;
+}
+.btn_shadow:focus,
+.btn_shadow {
+    box-shadow: 0px 3px 15px 0px rgba(235,235,235, 0.5);
+}
+
+/* END BUTTON STYLE */
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01. END GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02. START BOOTSTRAP NAVIGATION OVERRIDES
+* ----------------------------------------------------------------------------------------
+*/
+.navbar-default {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: transparent;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #fbc316 !important;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    color: #fbc316 !important;
+    background-color: transparent;
+}
+.navbar-brand{
+	padding: 0px;
+	height: auto;
+}
+.navbar-right{
+    margin-top: 18px;
+}
+.navbar-header .navbar-brand p{
+	color: #fbc316;
+	font-weight: 800;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: #fff;
+}
+.menu-top { background: rgba(0, 0, 0, 0) none repeat scroll 0 0 }
+.menu-top li a {
+    color: #fff !important;
+    font-size: 14px;
+    letter-spacing: 0.66666px;
+    font-weight: 500;
+    transition: all 0.4s ease-out;
+    font-family: 'Roboto Slab', sans-serif;
+    padding: 10px 10px;
+
+}
+.menu-top li .buy-btn{
+    background: #FCC517;
+    border-radius: 4px;
+}
+
+.menu-top li a:hover { color: #fbc316!important }
+
+.navbar-default.sticky_menu {
+    background-color: #db0811;
+    box-shadow: rgb(216, 216, 216, 0.5) 2px 1px 15px;
+    padding: 10px 0;
+    width: 100%;
+}
+.navbar-default.sticky_menu li a{ transition: all 0.4s ease-out; }
+.navbar-default .navbar-toggle { background: #fff none repeat scroll 0 0 }
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { background-color: #fff }
+.navbar-default .navbar-toggle .icon-bar { background-color: #fbc316 }
+
+.navbar-fixed-bottom, .navbar-fixed-top {
+    position: absolute;
+    }
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02. END BOOTSTRAP NAVIGATION OVERRIDES
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03.START HOME-SLIDER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+#slider .slider-1{
+    background-image:url(../../assets/images/slider/banner-slider-1.png);
+}
+#slider .slider-2{
+    background-image:url(../../assets/images/slider/banner-slider-2.png);
+}
+#slider,
+.single_slider,
+.single_slide_item_table
+{
+	height: 700px;
+	color:#fff;
+}
+.single_slider{
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	z-index: 1;
+}
+.single_slider:after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /*background: rgba(0, 54, 107, 0.6);*/
+    z-index: -1;
+}
+.single_slide_item_table {
+    display: table;
+    width: 100%;
+}
+.single_slide_item_tablecell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.slider_left{
+	padding-left:100px;
+}
+.slider_right{
+	padding-right:100px;
+}
+.sing_slide_content{
+    width: 35%;
+    float: right;
+    text-align: left;
+}
+.sing_slide_content h1 {
+	font-size: 70px;
+	font-weight: 500;
+	margin-bottom: 20px;
+    letter-spacing: 2px;
+	color: #fff;
+	line-height: 75px;
+    width: 
+}
+.sing_slide_content span{
+    color: #FCC517;
+}
+.sing_slide_content p{
+
+	font-size:18px;
+	margin-bottom:30px;
+}
+.single_slide_item_tablecell .slider-disclaimer{
+    position: absolute;
+    font-size: 12px;
+    bottom: 6%;
+}
+.slider_active .owl-nav .owl-next,
+.slider_active .owl-nav .owl-prev {
+	position: absolute;
+	bottom: 7%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #fff;
+	opacity: 1;
+	font-size: 20px;
+	transition: all 0.4s ease-in-out;
+	width: 28px;
+    height: 2px;
+	line-height: 50px;
+	background: rgba(245, 175, 37, 0.8);
+}
+.slider_active .owl-nav .owl-prev {
+	left: 85%;
+    background: #fff;
+}
+.slider_active .owl-nav .owl-next{
+	right: 10%;	
+}
+
+.slider_active .owl-nav i{
+    display: none;
+}
+
+.slider_active .owl-nav .owl-next:hover,
+.slider_active .owl-nav .owl-prev:hover {
+    border-color: #fff;
+    background: #fff;
+    color: #fff;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 03.END HOME-SLIDER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03. START HOME-BANNER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+#particles-js {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#particles_section{
+	position: relative;
+	height: 700px;
+}
+#particles_section:before{
+	content: '';
+	top:0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 54, 107, 0.7);
+	position: absolute;
+}
+#particles_section .banner_content{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin: 0 auto;
+	margin-top: -100px;
+}
+#particles_section .banner_content span{
+    color: #fbc316;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 15px 50px;
+	border-radius: 5px;
+    background: rgba(0,0,0, 0.2);
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid rgba(0,0,0, 0.1);
+    display: inline-block;
+}
+#particles_section .banner_content h1{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+#particles_section .banner_content p {
+    color: #fff;
+    font-size: 19px;
+    margin: 20px 0;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.banner_button{
+	margin-top: 30px;
+}
+#particles_section .mouse {
+    position: absolute;
+    width: 22px;
+    height: 42px;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -12px;
+    border-radius: 15px;
+    border: 2px solid rgba(235,235,235, 0.5);
+    animation: intro 1s;
+}
+#particles_section .scroll{
+	display: block;
+	width: 3px;
+	height: 3px;
+	margin: 6px auto;
+	border-radius: 4px;
+	background: #fff;
+	animation: finger 1s infinite;
+}	
+@keyframes intro{
+	0%{
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes finger{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: translateY(20px);
+	}
+}	
+#particles_section.gradient_bg{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6247e5+0,6247e5+0,00366b+0,003aab+99 */
+		background: #6247e5;
+	 /* Old browsers */
+		background: -moz-linear-gradient(-45deg, #6247e5 0%, #6247e5 0%, #00366b 0%, #003aab 99%); 
+	/* FF3.6-15 */
+		background: -webkit-linear-gradient(-45deg, #6247e5 0%,#6247e5 0%,#00366b 0%,#003aab 99%);
+	 /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(135deg, #6247e5 0%,#6247e5 0%,#00366b 0%,#003aab 99%);
+	 /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6247e5', endColorstr='#003aab',GradientType=1 );
+	 /* IE6-9 fallback on horizontal gradient */
+}
+#particles_section.gradient_bg:before {
+     background: none;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03. END HOME-BANNER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04. START ABOUT DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+.about_image {
+    margin-top: 20px;
+    max-width: 100%;
+  /*  background: rgba(245, 175, 37, 0.9);*/
+    transition: all 0.4s ease-in-out;
+}
+.about_image img{
+	/*filter: grayscale(50%);*/
+	/*transform: translate(15px, -15px);*/
+	transition: all 0.4s ease-in-out;
+	
+}
+/*.about_image:hover img{
+	filter: grayscale(0%);
+	
+}*/
+.about_text{ margin-left: 0px;
+text-align: center;
+margin-top: 12%;
+padding: 0 10%; }
+.about_text h2{
+	color: #DB0812;
+	display: inline-block;
+	font-size: 60px;
+	transition: 0.5s;
+}
+.about_text p{
+	letter-spacing: 0.5px;
+}
+
+#about_us .addon-btn-img{
+margin-top: 15%;
+}
+#about_us .product-slider{
+    margin-top: 2%;
+}
+
+#about_us .product-slider .Disclaimer-txt{
+    color: #202020;
+    font-size: 12px;
+    text-align: center;
+    opacity: 40%;
+    font-weight: 600;
+}
+
+#about_us .product-slider .carousel-wrap {
+  margin-top: 5%;
+  padding: 0 5%;
+  position: relative;
+}
+
+/* fix blank or flashing items on carousel */
+#about_us .product-slider .owl-carousel .item {
+  position: relative;
+  z-index: 100; 
+  -webkit-backface-visibility: hidden; 
+}
+
+/* end fix */
+#about_us .product-slider .owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #DB0812;
+}
+
+#about_us .product-slider .owl-nav i {
+  font-size: 40px;
+}
+
+#about_us .product-slider .owl-nav .owl-prev {
+  left: -30px;
+}
+
+#about_us .product-slider .owl-nav .owl-next {
+  right: -30px;
+}
+
+.product-items{
+    display: flex;
+    justify-content: center;
+    background: #FFF7DA;
+    border-radius: 10px;
+    align-items: center;
+   /* border: 1px solid #DB0812;*/
+    box-shadow: 0px 3px 15px 0px rgb(235 235 235 / 7%);
+    filter: blur(0.13px);
+  -webkit-filter: blur(0.13px);
+
+}
+.product-img{
+    padding: 10px;
+}
+.product-title{
+   padding: 10px;
+   margin-bottom: 0px;
+}
+.product-title h4{
+    text-align: left;
+   margin-bottom: 0px;
+   font-family: 'Roboto Slab', sans-serif;
+   font-size: 15px;
+}
+
+#about_us .addon-btn-img img{
+    width: 100%;
+}
+#about_us .owl-item .item:hover .product-items{ 
+  background: #fff;
+  border: 1px solid rgb(241 156 160);
+}
+
+
+#section-3::before {
+    background-image: url(../images/designed-strips.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: -106px 160px; */
+    content: "";
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04. END ABOUT DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05. FEATURES DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+#section-3 img{
+    width: 100%;
+}
+#section-3 {
+    background-image: url(../images/banner-5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    background-position: -205px 7px;
+}
+#section-3 .main-title{
+    margin-left: 0px;
+    text-align: center;
+    padding: 0 10%;
+}
+#section-3 .main-title h2 {
+    color: #DB0812;
+    display: inline-block;
+    font-size: 60px;
+    transition: 0.5s;
+}
+#section-3 .delicious-sec{
+    padding: 20px 30px;
+}
+#section-3 .delicious-sec img{
+    width: 70px;
+}
+#section-3 .pcard{
+    margin-bottom: 20px;
+}
+#section-3 .delicious-sec p{
+color: #202020;
+font-size: 18px;
+font-weight: 500;
+margin-top: 10px;
+}
+#section-3 .condition-text{
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05. START PREPATION DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+.preparation-slide .preparation-items{
+    padding: 0 12%;
+}
+
+.preparation-slide .guide::after {
+    background-image: url(../images/curved-line.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    width: 100%;
+    height: 18%;
+    position: absolute;
+    right: 55px;
+    top: 38%;
+   
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 0.9s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+}
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+.preparation-slide .guide-2::after {
+    background-image: url(../images/curved-line-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    width: 100%;
+    height: 18%;
+    position: absolute;
+    right: 55px;
+    top: 38%;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1.1s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05. END Preparation DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06. START RECIPES DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+#Recipes{
+    background: #FCC517;
+}
+#Recipes .recipes-carousel-wrap {
+ /* margin-top: 5%;
+  padding: 0 5%;*/
+  position: relative;
+}
+
+/* fix blank or flashing items on carousel */
+#Recipes .owl-carousel .item {
+  position: relative;
+  z-index: 100; 
+  -webkit-backface-visibility: hidden; 
+}
+
+/* end fix */
+#Recipes .owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #DB0812;
+}
+
+#Recipes .owl-nav i {
+  font-size: 40px;
+}
+
+#Recipes .owl-nav .owl-prev {
+  left: -30px;
+}
+
+#Recipes .owl-nav .owl-next {
+  right: -30px;
+}
+
+#Recipes .recipes-img{
+    position: relative;
+}
+#Recipes .recipes-text{
+    display: none;
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    background: #fef4d1;
+    border-radius: 20px;
+}
+#Recipes .recipes-text h4{
+    font-family: 'Roboto Slab', sans-serif;
+    color: #DB0812;
+    margin-top: 13px;
+}
+#Recipes .recipes-text p{
+   margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 22px;
+    }
+#Recipes .recipes-text .card-close-btn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    border-radius: 0 0 16px;
+    bottom: 0px;
+    background: #DB0812;
+    cursor: pointer;
+}
+
+#Recipes .recipes-text .card-close-btn img{
+    padding: 15px;
+}
+
+#Recipes .recipes-img .card-inside-btn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 2px;
+    border-radius: 0 0 16px;
+    bottom: 1px;
+    background: #DB0812;
+    cursor: pointer;
+}
+
+#Recipes .recipes-img .card-inside-btn img{
+    padding: 15px;
+}
+
+.contentWrapper {
+                width: 100%;
+                margin: 0 auto;
+                position: relative;
+            }
+            .tabsWrapper {
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+            }
+            .tabs {
+    /*width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    overflow: auto;*/
+}
+.tabs li {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 600;
+    color: #202020;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 6px 10px;
+    letter-spacing: 1px;
+    margin: 0 6px 11px;
+    transition: all 0.5s ease-in-out;
+}
+.tabs li.active {
+    color: #DB0812;
+    border-bottom: 1px solid;
+}
+.next, .previous {
+    position: absolute;
+    padding: 2px 4px;
+    top: 5px;
+}
+.next i, .previous i{
+    color: #202020;
+    font-weight: 700;
+    font-size: 20px;
+}
+.next {
+    right: 25%;
+}
+.previous {
+    left: 25%;
+}
+.tabContent {
+    width: 100%;
+    padding: 15px;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06. END RECIPES DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07. START TESTIMONIAL DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+#testimonial{
+
+}
+#testimonial .testimonial-carousel-wrap {
+  margin-top: 5%;
+  padding: 0 5%;
+  position: relative;
+}
+
+#testimonial .testimonial-img img{
+    width: 50px;
+    padding: 15px 0px;
+    display: inline-block;
+}
+/* fix blank or flashing items on carousel */
+#testimonial .owl-carousel .item {
+  position: relative;
+  z-index: 100; 
+  -webkit-backface-visibility: hidden; 
+}
+
+/* end fix */
+#testimonial .owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #DB0812;
+}
+
+#testimonial .owl-nav i {
+  font-size: 40px;
+}
+
+#testimonial .owl-nav .owl-prev {
+  left: -30px;
+}
+
+#testimonial .owl-nav .owl-next {
+  right: -30px;
+}
+#testimonial .testimonial-items{
+    padding: 0 25px;
+}
+#testimonial .testimonial-para{
+color: #202020;
+padding-bottom: 15%;
+}
+
+#testimonial .testimonial-author h4{
+    color: #DB0812;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+#testimonial .testimonial-author span{
+    font-size: 12px;
+    color: #202020;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 07. END TESTIMONIAL DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 13. START FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+#footers{
+    background: #DB0812;
+    padding-bottom: 100px;
+}
+#footers::before {
+    background-image: url(../images/designed-strips.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: -106px 160px; */
+    content: "";
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    right: 0;
+    margin-top: -102PX;
+}
+/*#footers .heading-text{
+    display: flex;
+    justify-content: space-between;
+}*/
+#footers .social-links {
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+#footers .social-links li{
+    padding: 15px;
+    font-size: 22px;
+    color: #fff;
+}
+#footers .social-links li a{
+    color: #fff;
+}
+
+#footers .section_heading span{
+    color: #FCC517;
+}
+#footers .footer-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+#footers .contact-info{
+    display: flex;
+}
+#footers .contact-info a{
+    color: #fff;
+}
+#footers .footer-menu{
+    display: flex;
+    color: #fff;
+    justify-content: flex-end;
+}
+#footers .footer-menu a{
+    color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#footers .insta-carousel-wrap{
+    margin-bottom: 50px;
+}
+
+
+/* fix blank or flashing items on carousel */
+#footers  .owl-carousel .item {
+  position: relative;
+  z-index: 100; 
+  -webkit-backface-visibility: hidden; 
+}
+
+/* end fix */
+#footers  .owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  border-radius: 50%;
+  width: 35px;
+  z-index: 0;
+  background: #333333c2;
+}
+
+#footers  .owl-nav i {
+  font-size: 30px;
+}
+
+#footers  .owl-nav .owl-prev {
+  left: -13px;
+    padding: 0 10px;
+}
+
+#footers  .owl-nav .owl-next {
+  right: -13px;
+  padding: 0 13px;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 13. END FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 14. START SCROLL-TOP DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+.scrollup {
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    text-align: center;
+    border-radius: 30px;
+	border: 1px solid #fbc316;
+    position: fixed;
+    right: 15px;
+    cursor: pointer;
+    bottom: 50px;
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.5);
+    z-index: 999;
+	transition: all 0.4s ease-in-out;
+}
+.scrollup:hover{
+	background: #fff;
+	border-color: #fff;
+}
+.scrollup i{
+	line-height: 35px;
+	color: #DB0812;
+	font-size: 24px;
+	display: inline-block;
+}
+.scrollup:hover i{
+	color: #DB0812;	
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 14. END SCROLL-TOP DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 14. Start POPUP Menu
+* ----------------------------------------------------------------------------------------
+*/
+
+
+#vn-info{
+    display: none;
+    position: absolute;
+    border: 1px solid #444;
+    background-color: #fff;
+    width: 400px;
+    z-index: 99;
+    padding: 15px 5px;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    padding: 20px 20px;
+    right: 88px;
+    top: 82px;
+}
+#vn-info img{
+    padding: 5px;
+}
+
+#vn-info1{
+    display: none;
+}
+.buy-now-sticy-btn{
+    display: none;
+    }
