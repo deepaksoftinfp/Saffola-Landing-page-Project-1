@@ -223,6 +223,13 @@ body{
 	transition-delay: 0, .2s;
 }
 
+#footers::before{
+	margin-top: -76PX;
+}
+#section-3::before{
+	height: 3%;
+}
+
 .buy-now-sticy-btn{
 	display: block;
 	position: fixed;
@@ -234,6 +241,16 @@ body{
     z-index: 9999;
     font-size: 22px;
     color: #db0812;
+}
+#Recipes .recipes-text p {
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 19px;
+}
+#Recipes .recipes-text h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 }
 .buy-now-sticy-btn i{
 	font-size: 18px;
@@ -262,5 +279,37 @@ body{
 @media only screen and (max-width: 768px) {
   
 
+
+}
+
+/* For mobile Ipad Pro: */
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+		#section-3 .delicious-sec p{
+			font-size: 16px;
+		}
+  	#section-3{
+  		background-position: -453px 6px;
+  	}
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  	#footers .footer-info{
+  		justify-content: center;
+  	}
+  	#footers .footer-menu{
+  		justify-content: center;
+  	}
+  	.sing_slide_content h1 {
+    font-size: 40px;
+    line-height: 55px;
+}
 
 }
